@@ -245,6 +245,11 @@ body {
     /* Hide any overflow */
     border-radius: 10px;
     border: 3px solid white;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* Add white border around the image */
 
     /* Rounded corners */
@@ -254,11 +259,11 @@ body {
 
 /* Image Styling */
 .carousel-item img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: auto;
     object-fit: contain;
     /* Ensure the image covers the entire container */
-    border-radius: 10px;
+    border-radius: 15px;
     /* Inherit rounded corners */
 }
 
@@ -268,6 +273,8 @@ body {
         width: 250px;
         /* Reduce size for tablet screens */
         height: 170px;
+        padding: 15px;
+        margin: 15px;
     }
 }
 
@@ -276,6 +283,8 @@ body {
         width: 100%;
         /* Full width for mobile screens */
         height: 150px;
+        padding: 10px;
+        margin: 10px;
         /* Adjust height for mobile */
     }
 
@@ -378,7 +387,7 @@ body {
 
 @media (max-width: 768px) {
     .tokenomics-title {
-        font-size: 2rem;
+        font-size: 3rem;
         /* Smaller title on mobile */
     }
 
@@ -433,7 +442,7 @@ body {
 
 @media (max-width: 768px) {
     .image-section {
-        margin: 60px 0;
+        margin: 20px 0;
         /* Reduce margin for smaller screens */
     }
 
@@ -441,5 +450,69 @@ body {
         max-width: 60%;
         height: auto;
         /* Scale down image further on mobile */
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    /* Black background for contrast */
+    padding: 40px 0;
+    /* Padding for the top and bottom of the footer */
+    text-align: center;
+    /* Center the content */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between social links */
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    /* Black color for icons */
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link i {
+    line-height: 50px;
+    /* Ensure icons are vertically aligned */
+}
+
+/* Hover Effects */
+.social-link:hover {
+    background-color: #1da1f2;
+    /* Twitter blue color for hover */
+    color: white;
+    /* Change icon color to white */
+}
+
+/* Telegram Hover Effect */
+.social-link:nth-child(2):hover {
+    background-color: #0088cc;
+    /* Telegram blue color for hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-link {
+        width: 40px;
+        /* Reduce icon size on smaller screens */
+        height: 40px;
+        font-size: 20px;
+        /* Smaller icons */
     }
 }
