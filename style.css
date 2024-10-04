@@ -1,0 +1,445 @@
+body {
+    background-color: #d2a846;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%),
+        radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%),
+        radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+    background-size: cover;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    margin: 0;
+    /* Ensure no unintended margins */
+    padding: 0;
+    /* Ensure no unintended padding */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/fredokaone/v14/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+    gap: 700px;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+
+}
+
+/* Gradient Logo Text */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(20deg, #fae4a8, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Join Button Styling */
+.join-button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+
+}
+
+.join-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        /* Slightly smaller font for the logo on mobile */
+        /* Add spacing between logo and button */
+    }
+
+    .join-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 50px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* Center the hero section */
+    /* Limit maximum width for desktop */
+
+}
+
+/* Hero Text */
+.hero-text {
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    margin-bottom: 20px;
+    background: linear-gradient(20deg, #fae4a8, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Hero Image */
+.hero-image {
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 80%;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+}
+
+/* Bouncy Animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 90%;
+        margin-top: 60px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Light background color */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Swiper Container */
+.swiper-container {
+    max-width: 1200px;
+    /* Carousel will not go beyond this width */
+    width: 100%;
+    /* Takes full width but limits to 1200px max */
+}
+
+/* Swiper Slide Styling */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel Item Styling */
+.carousel-item {
+    width: 400px;
+    /* Fixed width for each carousel item */
+    height: 100px;
+    /* Fixed height */
+    overflow: hidden;
+    overflow-x: hidden;
+    /* Hide any overflow */
+    border-radius: 10px;
+    border: 3px solid white;
+    /* Add white border around the image */
+
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: subtle shadow */
+}
+
+/* Image Styling */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the image covers the entire container */
+    border-radius: 10px;
+    /* Inherit rounded corners */
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .carousel-item {
+        width: 250px;
+        /* Reduce size for tablet screens */
+        height: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 100%;
+        /* Full width for mobile screens */
+        height: 150px;
+        /* Adjust height for mobile */
+    }
+
+    .swiper-container {
+        max-width: 100%;
+        /* Ensure full width on smaller screens */
+    }
+
+    .swiper-slide {
+        margin-right: 10px;
+        /* Add some spacing to prevent overflow */
+    }
+}
+
+
+
+/* Tokenomics Section */
+.tokenomics-section {
+    padding: 50px 20px;
+    /* Background matching the previous sections */
+    text-align: center;
+}
+
+/* Tokenomics Title */
+.tokenomics-title {
+    font-size: 70px;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 40px;
+}
+
+/* Tokenomics Content */
+.tokenomics-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 200px;
+    /* Space between the video and text */
+    flex-wrap: wrap;
+}
+
+/* Video Section */
+.tokenomics-video {
+    flex: 1;
+    max-width: 500px;
+    /* Limit the maximum width */
+}
+
+.tokenomics-video video {
+    width: 100%;
+    /* Make video responsive */
+    height: auto;
+    border-radius: 10px;
+    /* Rounded corners for the video */
+}
+
+/* Text Section */
+.tokenomics-text {
+    flex: 1;
+    max-width: 500px;
+    /* Limit the maximum width */
+}
+
+.text-block {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Fredoka One', cursive;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Border to match style */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tokenomics-content {
+        flex-direction: column;
+        /* Stack video and text on top of each other */
+        align-items: center;
+        gap: 50px;
+        /* Reduce gap for smaller screens */
+    }
+
+    .tokenomics-video,
+    .tokenomics-text {
+        max-width: 100%;
+        /* Ensure full width on smaller screens */
+    }
+
+    .tokenomics-title {
+        font-size: 2.5rem;
+        /* Slightly smaller title on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .tokenomics-title {
+        font-size: 2rem;
+        /* Smaller title on mobile */
+    }
+
+    .text-block {
+        font-size: 1rem;
+        /* Adjust text size for mobile */
+        padding: 15px;
+        /* Smaller padding for mobile */
+    }
+
+    .tokenomics-video iframe,
+    .tokenomics-video video {
+        width: 100%;
+        /* Ensure the video width adjusts to the container */
+        height: auto;
+        max-width: 100%;
+        /* Prevent overflow on mobile */
+    }
+
+    .tokenomics-content {
+        gap: 20px;
+        /* Reduce gap even further on mobile */
+    }
+}
+
+/* Image Section */
+.image-section {
+    display: flex;
+    justify-content: center;
+    /* Center the image horizontally */
+    align-items: center;
+    /* Center the image vertically */
+    margin: 100px 0;
+    /* Add margin on top and bottom */
+    padding: 0 20px;
+    /* Optional padding on the sides */
+}
+
+/* Centered Image */
+.centered-image {
+    max-width: 100%;
+    /* Responsive: scales down with screen size */
+    width: 500px;
+    height: 500px;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Optional: subtle shadow */
+}
+
+
+@media (max-width: 768px) {
+    .image-section {
+        margin: 60px 0;
+        /* Reduce margin for smaller screens */
+    }
+
+    .centered-image {
+        max-width: 60%;
+        height: auto;
+        /* Scale down image further on mobile */
+    }
+}
